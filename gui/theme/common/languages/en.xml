@@ -687,5 +687,8 @@
 		<string name="include_kernel_log">Include Kernel Log</string>
 		<string name="sha2_chk">Use SHA2 for hashing</string>
 		<string name="unable_set_boot_slot">Error changing bootloader boot slot to {1}</string>
+		<string name="wolf_wipe_substratum_overlays">Substratum Overlays</string>
+		<string name="wolf_wiping_subs">Wiping Substratum Files...</string>	
+	        <string name="substratum_done">-- Substratum Overlays Wipe Complete!</string>	
 	</resources>
 </language>
