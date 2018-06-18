@@ -860,7 +860,7 @@ int GUIAction::checkpartitionlist(std::string arg)
 		while (end_pos != string::npos && start_pos < List.size()) {
 			part_path = List.substr(start_pos, end_pos - start_pos);
 			LOGINFO("checkpartitionlist part_path '%s'\n", part_path.c_str());
-			if (part_path == "/and-sec" || part_path == "DALVIK" || part_path == "INTERNAL") {
+			if (part_path == "/and-sec" || part_path == "DALVIK" || part_path == "INTERNAL" || part_path == "SUBSTRATUM") {
 				// Do nothing
 			} else {
 				count++;
@@ -889,7 +889,7 @@ int GUIAction::getpartitiondetails(std::string arg)
 		while (end_pos != string::npos && start_pos < List.size()) {
 			part_path = List.substr(start_pos, end_pos - start_pos);
 			LOGINFO("getpartitiondetails part_path '%s'\n", part_path.c_str());
-			if (part_path == "/and-sec" || part_path == "DALVIK" || part_path == "INTERNAL") {
+			if (part_path == "/and-sec" || part_path == "DALVIK" || part_path == "INTERNAL" || part_path == "SUBSTRATUM") {
 				// Do nothing
 			} else {
 				DataManager::SetValue("tw_partition_path", part_path);
@@ -1153,8 +1153,19 @@ int GUIAction::wipe(std::string arg)
 							ret_val = false;
 							break;
 						} else {
+							gui_msg("dalvik_done=-- Dalvik Cache Directories Wipe Complete!");
 							skip = true;
 						}
+						} else if (wipe_path == "SUBSTRATUM") {
+					        if (!PartitionManager.Wipe_Substratum_Overlays()) {
+						    gui_err("wolf_substratum_wipe_err=Failed to wipe substratum overlays");
+							ret_val = false;
+							break;
+						} else {
+							gui_msg("substratum_done=-- Substratum Overlays Wipe Complete!");
+							skip = true;
+						}
+						
 					} else if (wipe_path == "INTERNAL") {
 						if (!PartitionManager.Wipe_Media_From_Data()) {
 							ret_val = false;

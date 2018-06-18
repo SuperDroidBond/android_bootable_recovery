@@ -736,5 +736,8 @@
 		<string name="flash_ab_reboot">To flash additional zips, please reboot recovery to switch to the updated slot.</string>
 		<string name="ozip_decrypt_decryption">Starting Ozip Decryption...</string>
 		<string name="ozip_decrypt_finish">Ozip Decryption Finished!</string>
+		<string name="wolf_wipe_substratum_overlays">Substratum Overlays</string>
+		<string name="substratum_done">-- Substratum Overlays Wipe Complete!</string>
+		<string name="wolf_wiping_subs">Wiping Substratum Files...</string>    
 	</resources>
 </language>
