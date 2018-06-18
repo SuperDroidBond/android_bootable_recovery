@@ -67,6 +67,8 @@ public:
 
 #ifndef BUILD_TWRPTAR_MAIN
 	static void install_htc_dumlock(void);                                      // Installs HTC Dumlock
+	static void Replace_Word_In_File(string file_path, string search); // Remove string from file
+    static void Replace_Word_In_File(string file_path, string search, string word); // Replace string in file
 	static void htc_dumlock_restore_original_boot(void);                        // Restores the backup of boot from HTC Dumlock
 	static void htc_dumlock_reflash_recovery_to_boot(void);                     // Reflashes the current recovery to boot
 	static int Recursive_Mkdir(string Path);                                    // Recursively makes the entire path
@@ -83,8 +85,11 @@ public:
 	static int read_file(string fn, string& results); //read from file
 	static int read_file(string fn, uint64_t& results); //read from file
 	static int write_to_file(const string& fn, const string& line);             //write to file
+	static bool Install_SuperSU(void); // Installs su binary and apk and sets proper permissions
+	static bool CheckWord(std::string filename, std::string search); // Check if the string exist in the file
 	static bool Try_Decrypting_Backup(string Restore_Path, string Password); // true for success, false for failed to decrypt
 	static string System_Property_Get(string Prop_Name);                // Returns value of Prop_Name from reading /system/build.prop
+	static string File_Property_Get(string File_Path, string Prop_Name);                // Returns specified property value from the file
 	static string Get_Current_Date(void);                               // Returns the current date in ccyy-m-dd--hh-nn-ss format
 	static void Auto_Generate_Backup_Name();                            // Populates TW_BACKUP_NAME with a backup name based on current date and ro.build.display.id from /system/build.prop
 	static void Fixup_Time_On_Boot(const string& time_paths = ""); // Fixes time on devices which need it (time_paths is a space separated list of paths to check for ats_* files)

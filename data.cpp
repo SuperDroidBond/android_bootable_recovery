@@ -35,6 +35,7 @@
 #include "find_file.hpp"
 #include "set_metadata.h"
 #include "gui/gui.hpp"
+#include "dumwolf.hpp"
 #include "infomanager.hpp"
 
 #define DEVID_MAX 64
@@ -724,6 +725,8 @@ void DataManager::SetDefaultValues()
 	mConst.SetValue(TW_MIN_SYSTEM_VAR, TW_MIN_SYSTEM_SIZE);
 	mData.SetValue(TW_BACKUP_NAME, "(Auto Generate)");
 
+     mPersist.SetValue(RW_DISABLE_FORCED_ENCRYPTION, "1");  
+     mPersist.SetValue(RW_DISABLE_DM_VERITY, "1");
 	mPersist.SetValue(TW_INSTALL_REBOOT_VAR, "0");
 	mPersist.SetValue(TW_SIGNED_ZIP_VERIFY_VAR, "0");
 	mPersist.SetValue(TW_DISABLE_FREE_SPACE_VAR, "0");

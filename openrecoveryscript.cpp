@@ -46,6 +46,7 @@
 #include "variables.h"
 #include "adb_install.h"
 #include "data.hpp"
+#include "dumwolf.hpp"
 #include "adb_install.h"
 #include "fuse_sideload.h"
 #include "gui/gui.hpp"

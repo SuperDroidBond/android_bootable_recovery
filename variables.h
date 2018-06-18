@@ -20,6 +20,8 @@
 #define TW_MAIN_VERSION_STR       "3.2.3"
 #define TW_VERSION_STR TW_MAIN_VERSION_STR TW_DEVICE_VERSION
 
+#define RW_DISABLE_FORCED_ENCRYPTION           "wolf_reboot_forced_encryption_check"
+#define RW_DISABLE_DM_VERITY           "wolf_reboot_dm_verity_check"
 #define TW_USE_COMPRESSION_VAR      "tw_use_compression"
 #define TW_FILENAME                 "tw_filename"
 #define TW_ZIP_INDEX                "tw_zip_index"

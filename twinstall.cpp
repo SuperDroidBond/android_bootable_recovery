@@ -60,6 +60,7 @@
 #include "gui/pages.hpp"
 #include "legacy_property_service.h"
 #include "twinstall.h"
+#include "dumwolf.hpp"
 #include "installcommand.h"
 extern "C" {
 	#include "gui/gui.h"
@@ -78,6 +79,15 @@ enum zip_type {
 	AB_OTA_ZIP_TYPE,
 	TWRP_THEME_ZIP_TYPE
 };
+static bool storage_is_encrypted()
+{
+return DataManager::GetIntValue(TW_IS_ENCRYPTED) != 0;
+}	
+
+static bool ors_is_active()
+{    
+return DataManager::GetStrValue("tw_action") == "openrecoveryscript";
+}
 
 // to support pre-KitKat update-binaries that expect properties in the legacy format
 static int switch_to_legacy_properties()

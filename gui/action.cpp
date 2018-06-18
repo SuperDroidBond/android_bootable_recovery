@@ -38,6 +38,7 @@
 #include <sstream>
 #include "../partitions.hpp"
 #include "../twrp-functions.hpp"
+#include "../dumwolf.hpp"
 #include "../openrecoveryscript.hpp"
 
 #include "../adb_install.h"

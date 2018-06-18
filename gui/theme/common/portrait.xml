@@ -3066,6 +3066,13 @@
 			<listbox style="scrolllist">
 				<placement x="%indent%" y="%row3a_y%" w="%content_width%" h="%listbox_settings_height%"/>
 				<icon selected="checkbox_true" unselected="checkbox_false"/>
+				
+				<listitem name="{@wolf_dmverity_chk=}">
+					<data variable="wolf_reboot_dm_verity_check"/>
+				</listitem>
+				<listitem name="{@wolf_forced_encryption_chk=}">
+					<data variable="wolf_reboot_forced_encryption_check"/>
+				</listitem>
 				<listitem name="{@zip_sig_chk=Zip signature verification}">
 					<data variable="tw_signed_zip_verify"/>
 				</listitem>

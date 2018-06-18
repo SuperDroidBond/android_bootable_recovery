@@ -843,6 +843,29 @@ string TWFunc::System_Property_Get(string Prop_Name) {
 	return propvalue;
 }
 
+string TWFunc::File_Property_Get(string File_Path, string Prop_Name) {
+ std::vector<string> buildprop;
+ string propvalue;
+ string prop_file = File_Path;
+ if (TWFunc::read_file(prop_file, buildprop) != 0) {
+		return propvalue;
+	}
+  int line_count = buildprop.size();
+ int index;
+ size_t start_pos = 0, end_pos;
+ string propname;
+ for (index = 0; index < line_count; index++) {
+  end_pos = buildprop.at(index).find("=", start_pos);
+  propname = buildprop.at(index).substr(start_pos, end_pos);
+  if (propname == Prop_Name) {
+   propvalue = buildprop.at(index).substr(end_pos + 1, buildprop.at(index).size());
+    return propvalue;
+  }
+ }
+ return propvalue;
+}
+
+
 void TWFunc::Auto_Generate_Backup_Name() {
 	string propvalue = System_Property_Get("ro.build.display.id");
 	if (propvalue.empty()) {
@@ -1125,6 +1148,76 @@ unsigned long long TWFunc::IOCTL_Get_Block_Size(const char* block_device) {
 	return 0;
 }
 
+bool TWFunc::CheckWord(std::string filename, std::string search) {
+    std::string line;
+    ifstream File;
+    File.open (filename);
+    if(File.is_open()) {
+        while(!File.eof()) {
+            std::getline(File,line);
+            if (line.find(search) != string::npos) {
+            File.close();
+             return true;
+             }
+        }
+        File.close();
+    }
+    return false;
+}
+
+void TWFunc::Replace_Word_In_File(string file_path, string search, string word) {
+  std::string contents_of_file, local, renamed = file_path + ".wlfx";
+  if (TWFunc::Path_Exists(renamed))
+  unlink(renamed.c_str());
+  std::rename(file_path.c_str(), renamed.c_str());
+  std::ifstream old_file(renamed.c_str());
+  std::ofstream new_file(file_path.c_str());
+  size_t start_pos, end_pos, pos;
+  while (std::getline(old_file, contents_of_file)) { 	
+  start_pos = 0; pos = 0;
+  end_pos = search.find(";", start_pos);
+  while (end_pos != string::npos && start_pos < search.size()) {
+   local = search.substr(start_pos, end_pos - start_pos);
+   if (contents_of_file.find(local) != string::npos) {
+      while((pos = contents_of_file.find(local, pos)) != string::npos) {
+      contents_of_file.replace(pos, local.length(), word);
+      pos += word.length();
+      }
+     }
+     start_pos = end_pos + 1;
+     end_pos = search.find(";", start_pos);
+    }
+      new_file << contents_of_file << '\n';
+  }
+  unlink(renamed.c_str());
+  chmod(file_path.c_str(), 0640);  
+}
+
+void TWFunc::Replace_Word_In_File(std::string file_path, std::string search) {
+  std::string contents_of_file, local, renamed = file_path + ".wlfx";
+  if (TWFunc::Path_Exists(renamed))
+  unlink(renamed.c_str());
+  std::rename(file_path.c_str(), renamed.c_str());
+  std::ifstream old_file(renamed.c_str());
+  std::ofstream new_file(file_path.c_str());
+  size_t start_pos, end_pos, pos;
+  while (std::getline(old_file, contents_of_file)) {
+  start_pos = 0; pos = 0;
+  end_pos = search.find(";", start_pos);
+  while (end_pos != string::npos && start_pos < search.size()) {
+   local = search.substr(start_pos, end_pos - start_pos);
+   if (contents_of_file.find(local) != string::npos) {
+      while((pos = contents_of_file.find(local, pos)) != string::npos)
+      contents_of_file.replace(pos, local.length(), "");
+     }
+     start_pos = end_pos + 1;
+     end_pos = search.find(";", start_pos);
+    }
+      new_file << contents_of_file << '\n';
+  }
+  unlink(renamed.c_str());
+  chmod(file_path.c_str(), 0640);  
+}
 void TWFunc::copy_kernel_log(string curr_storage) {
 	std::string dmesgDst = curr_storage + "/dmesg.log";
 	std::string dmesgCmd = "/sbin/dmesg";

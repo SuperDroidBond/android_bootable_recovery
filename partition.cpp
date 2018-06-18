@@ -37,6 +37,7 @@
 #include "twcommon.h"
 #include "partitions.hpp"
 #include "data.hpp"
+#include "dumwolf.hpp"
 #include "twrp-functions.hpp"
 #include "twrpTar.hpp"
 #include "exclude.hpp"

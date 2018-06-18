@@ -686,6 +686,15 @@
 		<string name="copy_kernel_log">Copied kernel log to {1}</string>
 		<string name="include_kernel_log">Include Kernel Log</string>
 		<string name="sha2_chk">Use SHA2 for hashing</string>
+		<string name="wolf_dmverity_chk">Disable DM-Verity</string>
+		<string name="wolf_forced_encryption_chk">Disable Forced Encryption</string>
+		<string name="wolf_wipe_substratum_overlays">Substratum Overlays</string>
+		<string name="substratum_done">-- Substratum Overlays Wipe Complete!</string>
+		<string name="wolf_dumwolf_dm_verity">Successfully patched DM-Verity</string>
+		<string name="wolf_dumwolf_dm_verity_off">DM-Verity is not enabled</string>
+		<string name="wolf_dumwolf_encryption">Successfully patched forced encryption</string>
+		<string name="wolf_dumwolf_encryption_off">Forced Encryption is not enabled</string>
+		<string name="wolf_wiping_subs">Wiping Substratum Files...</string>    
 		<string name="unable_set_boot_slot">Error changing bootloader boot slot to {1}</string>
 	</resources>
 </language>
