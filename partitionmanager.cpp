@@ -1258,6 +1258,31 @@ int TWPartitionManager::Wipe_By_Path(string Path) {
 	return false;
 }
 
+int TWPartitionManager::Wipe_Substratum_Overlays(void) {
+	struct stat st;
+	vector <string> subs;
+	
+    if (!Mount_By_Path("/data", true))
+		return false;
+		gui_msg("wolf_wiping_subs=Wiping Substratum Files...");
+		
+		subs.push_back("/data/system/theme");
+		subs.push_back("/sdcard/substratum");
+		
+		for (unsigned i = 0; i < subs.size(); ++i) {
+		if (stat(subs.at(i).c_str(), &st) == 0) {
+			TWFunc::removeDir(subs.at(i), false);
+			gui_msg(Msg("cleaned=Cleaned: {1}...")(subs.at(i)));
+		}
+     }
+		if (stat("/data/system/overlays.xml", &st) == 0) {
+		unlink("/data/system/overlays.xml");
+		gui_msg(Msg("cleaned=Cleaned: {1}...")("/data/system/overlays.xml"));
+      }
+    gui_msg("substratum_done=-- Substratum Overlays Wipe Complete!");
+	return true;
+}
+
 int TWPartitionManager::Wipe_By_Path(string Path, string New_File_System) {
 	std::vector<TWPartition*>::iterator iter;
 	int ret = false;
@@ -2122,6 +2147,11 @@ void TWPartitionManager::Get_Partition_List(string ListType, std::vector<Partiti
 		dalvik.Mount_Point = "DALVIK";
 		dalvik.selected = 0;
 		Partition_List->push_back(dalvik);
+		struct PartitionList substratum;
+		substratum.Display_Name = gui_parse_text("{@wolf_wipe_substratum_overlays}");
+		substratum.Mount_Point = "SUBSTRATUM";
+		substratum.selected = 0;
+		Partition_List->push_back(substratum);
 		for (iter = Partitions.begin(); iter != Partitions.end(); iter++) {
 			if ((*iter)->Wipe_Available_in_GUI && !(*iter)->Is_SubPartition) {
 				struct PartitionList part;
