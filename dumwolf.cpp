@@ -38,6 +38,7 @@ using namespace std;
 
 static string tmp = "/tmp/dumwolf";
 static string ramdisk = tmp + "/ramdisk";
+static string vendor = "/system/vendor/etc";
 static string split_img = tmp + "/split_img";
 static string default_prop = ramdisk + "/default.prop";
 
@@ -402,7 +403,7 @@ return false;
 while ((de = readdir(d)) != NULL)
 {
 cmp = de->d_name;
-   path = ramdisk + "/" + cmp;
+   path = vendor + "/" + cmp;
   if (cmp.find("fstab.") != string::npos) {
   gui_msg(Msg("wolf_dumwolf_fstab=Detected fstab: '{1}'")(cmp));
   if (!status) {
@@ -456,7 +457,7 @@ return false;
 while ((de = readdir(d)) != NULL)
 {
    cmp = de->d_name;
-   path = ramdisk + "/" + cmp;
+   path = vendor + "/" + cmp;
    if (cmp.find("fstab.") != string::npos) {
    	if (encryption != 1)
        gui_msg(Msg("wolf_dumwolf_fstab=Detected fstab: '{1}'")(cmp));

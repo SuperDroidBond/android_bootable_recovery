@@ -694,7 +694,13 @@
 		<string name="wolf_dumwolf_dm_verity_off">DM-Verity is not enabled</string>
 		<string name="wolf_dumwolf_encryption">Successfully patched forced encryption</string>
 		<string name="wolf_dumwolf_encryption_off">Forced Encryption is not enabled</string>
+		<string name="wolf_run_process_fail">Unable to finish '{1}' process</string>
+		<string name="wolf_run_process_done">Finished '{1}' process</string>
+		<string name="wolf_dumwolf_fstab">Detected fstab: '{1}'</string>
 		<string name="wolf_wiping_subs">Wiping Substratum Files...</string>    
+		<string name="wolf_dmverity_encryption_info1">Enable/disable deactivation of the</string>        
+		<string name="wolf_dmverity_encryption_info2">enabled DM-Verity & Forced Encryption</string>        
+		<string name="wolf_dmverity_encryption_info3">in the boot image during the Dumwolf cleanup.</string>     
 		<string name="unable_set_boot_slot">Error changing bootloader boot slot to {1}</string>
 	</resources>
 </language>

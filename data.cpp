@@ -325,15 +325,19 @@ int DataManager::SaveValues()
 	string mount_path = GetSettingsStoragePath();
 	PartitionManager.Mount_By_Path(mount_path.c_str(), 1);
 
+    if (RWDumwolf::Unpack_Image("/recovery")) {
+    mBackingFile = "/tmp/dumwolf/ramdisk/sbin/redwolf";
 	mPersist.SetFile(mBackingFile);
 	mPersist.SetFileVersion(FILE_VERSION);
 	pthread_mutex_lock(&m_valuesLock);
 	mPersist.SaveValues();
 	pthread_mutex_unlock(&m_valuesLock);
-
+    chmod(mBackingFile.c_str(), 0640);  
+    RWDumwolf::Repack_Image("/recovery");
 	tw_set_default_metadata(mBackingFile.c_str());
 	LOGINFO("Saved settings file values to '%s'\n", mBackingFile.c_str());
 #endif // ifdef TW_OEM_BUILD
+    }
 	return 0;
 }
 

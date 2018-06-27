@@ -60,6 +60,7 @@ LOCAL_SRC_FILES := \
     progresstracking.cpp \
     twinstall.cpp \
     twrp-functions.cpp \
+    dumwolf.cpp \
     twrpDigestDriver.cpp \
     openrecoveryscript.cpp \
     tarWrite.c \

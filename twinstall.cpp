@@ -29,6 +29,8 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 #include <unistd.h>
+#include <iostream>
+#include <fstream>
 
 #include <string.h>
 #include <stdio.h>
@@ -50,6 +52,7 @@
 #include "verifier.h"
 #endif
 #include "variables.h"
+#include "cutils/properties.h"
 #include "data.hpp"
 #include "partitions.hpp"
 #include "twrpDigestDriver.hpp"
