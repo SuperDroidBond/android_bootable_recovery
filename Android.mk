@@ -379,6 +379,7 @@ LOCAL_REQUIRED_MODULES += \
     twrp \
     fsck.fat \
     fatlabel \
+    startx \
     mkfs.fat \
     permissive.sh \
     simg2img_twrp \
