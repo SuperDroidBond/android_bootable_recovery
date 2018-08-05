@@ -2,8 +2,8 @@
 <recovery>
 	<details>
 		<resolution width="1080" height="1920"/>
-		<author>TeamWin</author>
-		<title>TWRP</title>
+		<author>SuperDroidBond</author>
+		<title>TWRP-X</title>
 		<description>splash screen</description>
 		<themeversion>3</themeversion>
 	</details>
@@ -17,9 +17,9 @@
 	<variables>
 		<variable name="screen_width" value="1080"/>
 		<variable name="screen_height" value="1920"/>
-		<variable name="background_color" value="#222222"/>
-		<variable name="header_color" value="#555555"/>
-		<variable name="accent_color" value="#0090CA"/>
+		<variable name="background_color" value="#000000"/>
+		<variable name="header_color" value="#000000"/>
+		<variable name="accent_color" value="#FF0000"/>
 	</variables>
 
 	<pages>
@@ -32,18 +32,17 @@
 
 			<image>
 				<image resource="splashlogo"/>
-				<placement x="540" y="456" placement="4"/>
+				<placement x="540" y="690" placement="4"/>
 			</image>
-
 			<image>
 				<image resource="splashteamwin"/>
-				<placement x="540" y="1540" placement="4"/>
+				<placement x="540" y="1050" placement="4"/>
 			</image>
 
-			<text color="%header_color%">
+			<text color="%accent_color%">
 				<font resource="font_l"/>
-				<placement x="540" y="1590" placement="5"/>
-				<text>Recovery Project %tw_version%</text>
+				<placement x="540" y="1100" placement="5"/>
+				<text>TWRP v%tw_version%</text>
 			</text>
 		</page>
 	</pages>
