@@ -4,9 +4,9 @@
 	<display>Spanish</display>
 	<resources>
 		<!-- Font overrides - only change these if your language requires special characters -->
-		<resource name="font_l" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
-		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
-		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
+		<resource name="font_l" type="fontoverride" filename="Amarante-Regular.ttf" scale="100" />
+		<resource name="font_m" type="fontoverride" filename="Amarante-Regular.ttf" scale="100" />
+		<resource name="font_s" type="fontoverride" filename="Amarante-Regular.ttf" scale="100" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
 
 		<string name="system">Sistema</string>
@@ -26,8 +26,8 @@
 		<string name="sdext">SD-EXT</string>
 		<string name="adopted_data">Datos adoptados</string>
 		<string name="adopted_storage">Memoria adoptada</string>
-		<string name="twrp_header">Proyecto Team Win Recovery</string>
-		<string name="twrp_watch_header">TWRP %tw_version%</string>
+		<string name="twrp_header">TWRP-X v%tw_version%</string>
+		<string name="twrp_watch_header">TWRP v%tw_version%</string>
 		<string name="cpu_temp">CPU: %tw_cpu_temp% °C</string>
 		<string name="battery_pct">Batería: %tw_battery%</string>
 		<string name="sort_by_name">Ordenar por Nombre</string>

@@ -5,9 +5,9 @@
 
 	<resources>
 		<!-- Font overrides - only change these if your language requires special characters -->
-		<resource name="font_l" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
-		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
-		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
+		<resource name="font_l" type="fontoverride" filename="Amarante-Regular.ttf" scale="100" />
+		<resource name="font_m" type="fontoverride" filename="Amarante-Regular.ttf" scale="100" />
+		<resource name="font_s" type="fontoverride" filename="Amarante-Regular.ttf" scale="100" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
 
 		<!-- Partition display names -->
@@ -32,8 +32,8 @@
 		<string name="adopted_storage">Adoptált tároló</string>
 
 		<!-- GUI XML strings -->
-		<string name="twrp_header">Team Win Recovery Project</string>
-		<string name="twrp_watch_header">TWRP %tw_version%</string>
+		<string name="twrp_header">TWRP-X v%tw_version%</string>
+		<string name="twrp_watch_header">TWRP-X v%tw_version%</string>
 		<string name="cpu_temp">CPU: %tw_cpu_temp% °C</string>
 		<string name="battery_pct">Akkumulátor: %tw_battery%</string>
 		<string name="sort_by_name">Rendezés név szerint</string>

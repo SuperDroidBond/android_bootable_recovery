@@ -5,9 +5,9 @@
 
 	<resources>
 		<!-- Font overrides - only change these if your language requires special characters -->
-		<resource filename="RobotoCondensed-Regular.ttf" name="font_l" scale="90" type="fontoverride"/>
-		<resource filename="RobotoCondensed-Regular.ttf" name="font_m" scale="90" type="fontoverride"/>
-		<resource filename="RobotoCondensed-Regular.ttf" name="font_s" scale="90" type="fontoverride"/>
+		<resource filename="Amarante-Regular.ttf" name="font_l" scale="90" type="fontoverride"/>
+		<resource filename="Amarante-Regular.ttf" name="font_m" scale="90" type="fontoverride"/>
+		<resource filename="Amarante-Regular.ttf" name="font_s" scale="90" type="fontoverride"/>
 		<resource filename="DroidSansMono.ttf" name="fixed" scale="100" type="fontoverride"/>
 
 		<!-- Partition display names -->
@@ -33,8 +33,8 @@
 		<string name="autostorage">Storage</string>
 
 		<!-- GUI XML strings -->
-		<string name="twrp_header">Team Win Recovery Project</string>
-		<string name="twrp_watch_header">TWRP %tw_version%</string>
+		<string name="twrp_header">TWRP-X v%tw_version%</string>
+		<string name="twrp_watch_header">TWRP-X v%tw_version%</string>
 		<string name="cpu_temp">ЦП: %tw_cpu_temp% °C</string>
 		<string name="battery_pct">Батарея: %tw_battery%</string>
 		<string name="sort_by_name">Сорт.по имени</string>
