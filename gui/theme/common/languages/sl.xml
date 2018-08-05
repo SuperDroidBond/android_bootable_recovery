@@ -4,9 +4,9 @@
 	<display>Slovenian</display>
 	<resources>
 		<!-- Font overrides - only change these if your language requires special characters -->
-		<resource name="font_l" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="90" />
-		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="90" />
-		<resource name="font_s" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="90" />
+		<resource name="font_l" type="fontoverride" filename="Amarante-Regular.ttf" scale="90" />
+		<resource name="font_m" type="fontoverride" filename="Amarante-Regular.ttf" scale="90" />
+		<resource name="font_s" type="fontoverride" filename="Amarante-Regular.ttf" scale="90" />
 		<resource name="fixed" type="fontoverride" filename="DroidSansMono.ttf" scale="100" />
 
 		<string name="system">Sistem</string>
@@ -26,8 +26,8 @@
 		<string name="sdext">SD-EXT</string>
 		<string name="adopted_data">Prevzeti podatki</string>
 		<string name="adopted_storage">Prevzeta pomnilniška naprava</string>
-		<string name="twrp_header">Team Win Recovery Project</string>
-		<string name="twrp_watch_header">TWRP %tw_version%</string>
+		<string name="twrp_header">TWRP-X v%tw_version%</string>
+		<string name="twrp_watch_header">TWRP-X v%tw_version%</string>
 		<string name="cpu_temp">CPE: %tw_cpu_temp% °C</string>
 		<string name="battery_pct">Baterija: %tw_battery%</string>
 		<string name="sort_by_name">Razvrsti po imenu</string>

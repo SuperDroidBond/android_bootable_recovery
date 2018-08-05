@@ -34,38 +34,38 @@
 
 		<style name="main_button">
 			<highlight color="%highlight_color%"/>
-			<font resource="font_l" color="%text_button_color%"/>
+			<font resource="main_button_l" color="%text_button_color%"/>
 			<image resource="main_button"/>
 		</style>
 
 		<style name="main_button_half_height">
 			<highlight color="%highlight_color%"/>
-			<font resource="font_m" color="%text_button_color%"/>
+			<font resource="main_button_m" color="%text_button_color%"/>
 			<image resource="main_button_half_height"/>
 		</style>
 
 		<style name="main_button_half_height_full_width">
 			<highlight color="%highlight_color%"/>
-			<font resource="font_m" color="%text_button_color%"/>
+			<font resource="main_button_m" color="%text_button_color%"/>
 			<image resource="main_button_half_height_full_width"/>
 		</style>
 
 		<style name="button_third_width">
 			<highlight color="%highlight_color%"/>
-			<font resource="font_m" color="%text_button_color%"/>
+			<font resource="main_button_m" color="%text_button_color%"/>
 			<image resource="tab_3"/>
 		</style>
 
 		<style name="button_quarter_width">
 			<highlight color="%highlight_color%"/>
-			<font resource="font_m" color="%text_button_color%"/>
+			<font resource="main_button_m" color="%text_button_color%"/>
 			<image resource="tab_4"/>
 		</style>
 
 		<style name="fab">
 			<highlight color="%highlight_color%"/>
 			<placement x="%indent_right%" y="%row21a_y%" placement="1"/>
-			<font resource="font_m" color="%button_text_color%"/>
+			<font resource="font_m" color="%text_button_color%"/>
 		</style>
 
 		<style name="tab">
@@ -169,13 +169,7 @@
 
 			<text style="text_l">
 				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@twrp_header=Team Win Recovery Project}</text>
-			</text>
-
-			<text style="text_m">
-				<condition var1="tw_no_cpu_temp" var2="0"/>
-				<placement x="%col1_x_header%" y="%row4_header_y%"/>
-				<text>%tw_version%</text>
+				<text>{@twrp_header=TWRP-X v%tw_version%}</text>
 			</text>
 
 			<button style="main_button">
@@ -3096,9 +3090,6 @@
 				</listitem>
 				<listitem name="{@rev_navbar_chk=Reversed navbar layout}">
 					<data variable="tw_samsung_navbar"/>
-				</listitem>
-				<listitem name="{@reboot_install_app_prompt_install=Prompt to install TWRP app on every reboot}">
-					<data variable="tw_app_prompt"/>
 				</listitem>
 				<listitem name="{@simact_chk=Simulate actions for theme testing}">
 					<data variable="tw_simulate_actions"/>
