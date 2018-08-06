@@ -4039,10 +4039,11 @@
 		<page name="lock">
 			<background color="%semi_transparent%"/>
 
-			<image>
+			<button>
 				<image resource="unlock_icon"/>
+				<action function="flashlight"/>
 				<placement x="%center_x%" y="%row10_y%" placement="4"/>
-			</image>
+			</button>
 
 			<slider>
 				<text>{@swipe_to_unlock=Swipe to Unlock}</text>
