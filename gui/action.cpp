@@ -199,6 +199,7 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(setlanguage);
 		ADD_ACTION(checkforapp);
 		ADD_ACTION(togglebacklight);
+		ADD_ACTION(flashlight);
 
 		// remember actions that run in the caller thread
 		for (mapFunc::const_iterator it = mf.begin(); it != mf.end(); ++it)
@@ -2058,4 +2059,35 @@ int GUIAction::installapp(std::string arg __unused)
 exit:
 	operation_end(0);
 	return 0;
+}
+
+int GUIAction::flashlight(std::string arg __unused)
+ {
+	std::string path, one, zero, flashpath = "/sys/class/leds/led:torch_;/sys/class/leds/torch-light;";
+    struct stat st;
+    bool done = false;
+    size_t start_pos = 0, end_pos;
+    end_pos = flashpath.find(";", start_pos);
+ 	while (end_pos != string::npos && start_pos < flashpath.size()) {
+	   if (done)
+   	   break;        
+    	   path = flashpath.substr(start_pos, end_pos - start_pos);
+     	one = path + "1/brightness";
+        zero = path + "0/brightness";
+        if (stat(one.c_str(), &st) == 0 && stat(zero.c_str(), &st) == 0) {
+        done = true;
+        if (DataManager::GetIntValue("flashlight") == 0) {
+        TWFunc::write_to_file(one, "100");
+	    TWFunc::write_to_file(zero, "100");
+    	    DataManager::SetValue("flashlight", 1);
+          } else {
+        TWFunc::write_to_file(one, "0");
+	 TWFunc::write_to_file(zero, "0");
+        DataManager::SetValue("flashlight", 0);
+        }
+  }
+     start_pos = end_pos + 1;
+     end_pos = flashpath.find(";", start_pos);
+    }
+    return 0;
 }

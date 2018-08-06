@@ -3770,10 +3770,16 @@
 		<page name="lock">
 			<background color="%semi_transparent%"/>
 
-			<image>
+			<text style="text_l" color="%text_color%">
+				<placement x="%center_x%" y="%row5_y%" placement="4"/>
+				<text>{@flashlight_on_lock=Click LockIcon for Torch}</text>
+    			</text>
+    
+			<button>
 				<image resource="unlock_icon"/>
+				<action function="flashlight"/>
 				<placement x="%center_x%" y="%row10_y%" placement="4"/>
-			</image>
+			</button>
 
 			<slider>
 				<text>{@swipe_to_unlock=Swipe to Unlock}</text>
@@ -4593,6 +4599,11 @@
 			<action>
 				<touch key="power+voldown" />
 				<action function="screenshot" />
+			</action>
+			
+			<action>
+				<touch key="power+volup"/>
+				<action function="flashlight"/>
 			</action>
 		</page>
 

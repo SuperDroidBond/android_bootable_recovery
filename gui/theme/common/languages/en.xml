@@ -690,5 +690,6 @@
 		<string name="wolf_wipe_substratum_overlays">Substratum Overlays</string>
 		<string name="wolf_wiping_subs">Wiping Substratum Files...</string>	
 	        <string name="substratum_done">-- Substratum Overlays Wipe Complete!</string>	
+		<string name="flashlight_on_lock">Click LockIcon for Torch</string>
 	</resources>
 </language>
