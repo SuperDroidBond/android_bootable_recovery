@@ -14,12 +14,12 @@
 	</include>
 
 	<resources>
-		<font name="font_l" filename="RobotoCondensed-Regular.ttf" size="54"/>
+		<font name="font_l" filename="RobotoCondensed-Regular.ttf" size="60"/>
 		<font name="font_m" filename="RobotoCondensed-Regular.ttf" size="42"/>
 		<font name="font_s" filename="RobotoCondensed-Regular.ttf" size="36"/>
 		<font name="fixed" filename="DroidSansMono.ttf" size="30"/>
 
-		<font name="keylabel" filename="RobotoCondensed-Regular.ttf" size="64"/>
+		<font name="keylabel" filename="RobotoCondensed-Regular.ttf" weight="bold" size="65"/>
 		<font name="keylabel-small" filename="RobotoCondensed-Regular.ttf" size="46"/>
 		<font name="keylabel-longpress" filename="RobotoCondensed-Regular.ttf" size="32"/>
 
@@ -174,22 +174,22 @@
 		<variable name="navbar_btn_y" value="1856"/>
 		<variable name="keyboard_y" value="1149"/>
 		<variable name="keyboard_terminal_y" value="1053"/>
-		<variable name="background_color" value="#000000"/>
-		<variable name="accent_color" value="#FF0000"/>
-		<variable name="accent_color_semitransparent" value="#FF000030"/>
-		<variable name="text_color" value="#FF0000AA"/>
-		<variable name="text_button_color" value="#000000"/>
+		<variable name="background_color" value="#0f0f0f"/>
+		<variable name="accent_color" value="#c60000"/>
+		<variable name="accent_color_semitransparent" value="#c6000030"/>
+		<variable name="text_color" value="#c60000"/>
+		<variable name="text_button_color" value="#c60000"/>
 		<variable name="text_success_color" value="#00FF00"/>
-		<variable name="text_fail_color" value="#FF5500"/>
-		<variable name="highlight_color" value="#8A000080"/>
-		<variable name="caps_highlight_color" value="#8A000080"/>
+		<variable name="text_fail_color" value="#7F5500"/>
+		<variable name="highlight_color" value="#c6000080"/>
+		<variable name="caps_highlight_color" value="#c6000080"/>
 		<variable name="transparent" value="#00000000"/>
 		<variable name="semi_transparent" value="#00000099"/>
-		<variable name="warning" value="#FF5500"/>
-		<variable name="error" value="#FF5500"/>
-		<variable name="highlight" value="#FF0000"/>
-		<variable name="fileselector_linecolor" value="#FF0000"/>
-		<variable name="fileselector_highlight_color" value="#8A000080"/>
+		<variable name="warning" value="#7F5500"/>
+		<variable name="error" value="#7F5500"/>
+		<variable name="highlight" value="#c60000"/>
+		<variable name="fileselector_linecolor" value="#c60000"/>
+		<variable name="fileselector_highlight_color" value="#c6000080"/>
 		<variable name="fileselector_separatorheight" value="2"/>
 		<variable name="fileselector_spacing" value="0"/>
 		<variable name="fileselector_install_height" value="1152"/>
