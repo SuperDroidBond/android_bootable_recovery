@@ -14,14 +14,16 @@
 	</include>
 
 	<resources>
-		<font name="font_l" filename="RobotoCondensed-Regular.ttf" size="60"/>
-		<font name="font_m" filename="RobotoCondensed-Regular.ttf" size="42"/>
-		<font name="font_s" filename="RobotoCondensed-Regular.ttf" size="36"/>
+		<font name="font_l" filename="Amarante-Regular.ttf" size="60"/>
+		<font name="font_m" filename="Amarante-Regular.ttf" size="40"/>
+		<font name="font_s" filename="Amarante-Regular.ttf" size="32"/>
+		<font name="main_button_l" filename="Amarante-Regular.ttf" weight="bold" size="54"/>
+		<font name="main_button_m" filename="Amarante-Regular.ttf" size="40"/>
 		<font name="fixed" filename="DroidSansMono.ttf" size="30"/>
 
-		<font name="keylabel" filename="RobotoCondensed-Regular.ttf" weight="bold" size="65"/>
-		<font name="keylabel-small" filename="RobotoCondensed-Regular.ttf" size="46"/>
-		<font name="keylabel-longpress" filename="RobotoCondensed-Regular.ttf" size="32"/>
+		<font name="keylabel" filename="Amarante-Regular.ttf" weight="bold" size="65"/>
+		<font name="keylabel-small" filename="Amarante-Regular.ttf" size="46"/>
+		<font name="keylabel-longpress" filename="Amarante-Regular.ttf" size="32"/>
 
 		<image name="logo" filename="logo" retainaspect="1"/>
 		<image name="main_button" filename="main_button"/>
@@ -178,13 +180,13 @@
 		<variable name="accent_color" value="#c60000"/>
 		<variable name="accent_color_semitransparent" value="#c6000030"/>
 		<variable name="text_color" value="#c60000"/>
-		<variable name="text_button_color" value="#c60000"/>
+		<variable name="text_button_color" value="#ff0000"/>
 		<variable name="text_success_color" value="#00FF00"/>
 		<variable name="text_fail_color" value="#7F5500"/>
 		<variable name="highlight_color" value="#c6000080"/>
 		<variable name="caps_highlight_color" value="#c6000080"/>
 		<variable name="transparent" value="#00000000"/>
-		<variable name="semi_transparent" value="#00000099"/>
+		<variable name="semi_transparent" value="#000000BF"/>
 		<variable name="warning" value="#7F5500"/>
 		<variable name="error" value="#7F5500"/>
 		<variable name="highlight" value="#c60000"/>

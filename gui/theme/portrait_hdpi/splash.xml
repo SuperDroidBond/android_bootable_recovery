@@ -9,7 +9,7 @@
 	</details>
 
 	<resources>
-		<font name="font_l" filename="RobotoCondensed-Regular.ttf" size="52"/>
+		<font name="font_l" filename="Amarante-Regular.ttf" size="60"/>
 		<image name="splashlogo" filename="splashlogo" retainaspect="1"/>
 		<image name="splashteamwin" filename="splashteamwin" retainaspect="1"/>
 	</resources>
@@ -17,9 +17,9 @@
 	<variables>
 		<variable name="screen_width" value="1080"/>
 		<variable name="screen_height" value="1920"/>
-		<variable name="background_color" value="#000000"/>
-		<variable name="header_color" value="#000000"/>
-		<variable name="accent_color" value="#700000"/>
+		<variable name="background_color" value="#0f0f0f"/>
+		<variable name="header_color" value="#0f0f0f"/>
+		<variable name="accent_color" value="#c60000"/>
 	</variables>
 
 	<pages>
@@ -41,8 +41,8 @@
 
 			<text color="%accent_color%">
 				<font resource="font_l"/>
-				<placement x="540" y="1100" placement="5"/>
-				<text>TWRP v%tw_version%</text>
+				<placement x="540" y="1150" placement="5"/>
+				<text>TWRP-X v%tw_version%</text>
 			</text>
 		</page>
 	</pages>
